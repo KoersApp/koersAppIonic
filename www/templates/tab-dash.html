@@ -1,0 +1,36 @@
+<ion-view view-title="List">
+    
+  <ion-content class="padding">
+    <h2>Welcome to Indicator Scanner</h2>
+    <p>
+    Indicator scanner is an realtime scanner that uses the candlestick algoritm to determin whether to buy or to sell in the next hour <a href="http://stockcharts.com/school/doku.php?id=chart_school:chart_analysis:candlestick_pattern_dictionary" target="_blank">info about the patterns</a>.
+    </p>
+    <p>
+      Not all patterns can be seen by the naked eye there comes this app in the picture by calculating the slightest bit off change it can  get identify an pattern and warn  you with an push notification.
+    </p>Add tickers   
+      <div ng-controller="repeatController">
+          <li class="animate-repeat" ng-if="ticks.length > 0">
+      <strong>Total lenght is {{ticks.length}}.</strong>
+    </li>
+          <div class="animate-repeat" ng-if="ticks.length == null">
+      <li><strong>It Seems you don`t have connection to the server..</strong></li>
+      <li><strong>Check your wifi.</strong></li>
+          <li><strong>The servers could be down</strong></li>
+    
+    </div>
+  
+  <p></p>
+ <a class="item item-icon-left"><i class="icon ion-search"></i><input type="search" ng-model="q" placeholder="Search..." aria-label="filter friends" />
+</a>
+  <ul class="example-animate-container">
+    <li class="animate-repeat" ng-repeat="tick in ticks | filter:q as results">
+      [{{$index + 1}}] {{tick.id}}
+    </li>
+    <li class="animate-repeat" ng-if="results.length == 0">
+      <strong>No results found...</strong>
+    </li>
+  </ul>
+</div>
+  </ion-content>
+</ion-view>
+

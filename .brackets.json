@@ -1,0 +1,15 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/CatDev/eclipse_workspace/IndicatorScanner/www/js/scrape.js",
+        "C:/CatDev/eclipse_workspace/IndicatorScanner/platforms/android/build/intermediates/assets/debug/www/js/controllers.js",
+        "C:/CatDev/eclipse_workspace/IndicatorScanner/platforms/android/assets/www/plugins/cordova-plugin-whitelist/whitelist.js",
+        "C:/CatDev/eclipse_workspace/IndicatorScanner/plugins/cordova-plugin-device/src/ubuntu/device.js",
+        "C:/CatDev/eclipse_workspace/IndicatorScanner/www/js/services.js",
+        "C:/CatDev/eclipse_workspace/IndicatorScanner/platforms/android/build/intermediates/assets/debug/www/plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+        "C:/CatDev/eclipse_workspace/IndicatorScanner/platforms/android/build/intermediates/assets/debug/www/plugins/cordova-plugin-statusbar/www/statusbar.js",
+        "C:/CatDev/eclipse_workspace/IndicatorScanner/plugins/cordova-plugin-device/src/browser/DeviceProxy.js",
+        "C:/CatDev/eclipse_workspace/IndicatorScanner/platforms/android/build/intermediates/assets/debug/www/plugins/cordova-plugin-whitelist/whitelist.js",
+        "C:/CatDev/eclipse_workspace/IndicatorScanner/platforms/android/cordova/lib/android_sdk_version.js",
+        "C:/CatDev/eclipse_workspace/IndicatorScanner/platforms/android/cordova/lib/appinfo.js"
+    ]
+}

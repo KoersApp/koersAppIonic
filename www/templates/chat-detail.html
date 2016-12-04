@@ -1,0 +1,48 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="Info">
+    <ion-content class="padding">
+<div class="item item-text-wrap" ng-controller="LineCtrl">
+                    <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="true" chart-series="series" chart-click="onClick"></canvas>
+                </div>
+        <ion-item collection-repeat="item in items">
+            
+
+            <div class="card">
+                <div class="item item-divider">
+                    {{item.e}} - {{item.t}}
+                    
+                </div>                
+                <div class="item item-text-wrap">
+                    <li>id - {{item.id}}</li>
+                    <li>l - {{item.l}}</li>
+                    <li>l_fix - {{item.l_fix}}</li>
+                    <li>l_cur - {{item.l_cur}}</li>
+                    <li>s - {{item.s}}</li>
+                    <li>c - {{item.c}}</li>
+                    <li>c_fix - {{item.c_fix}}</li>
+                    <li>cp - {{item.cp}}</li>
+                    <li>cp_fix - {{item.cp_fix}}</li>
+                    <li>ccol - {{item.ccol}}</li>
+                    <li>pcls - {{item.pcls_fix}}</li>
+                </div>
+                <div class="item item-divider">
+                    {{item.ltt}} // {{item.lt}}
+                    <li>{{item.lt_dts}}</li>
+                    <li>{{data.ltt}}</li>
+                </div>
+                
+
+            </div>
+
+
+        </ion-item>
+        
+        
+
+    </ion-content>
+</ion-view>
