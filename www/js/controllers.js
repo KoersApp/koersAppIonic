@@ -2,9 +2,16 @@ angular.module('starter.controllers', ['ngAnimate'])
 
 .controller('DashCtrl', function ($scope) {})
 
-.controller('ChatsCtrl', function ($scope, Chats) {
+/*.controller('ChatsCtrl', function ($scope, Chats) {
     $scope.chats = Chats.all();
     $scope.getsome = 'Collect coins';
+})*/
+
+.controller('ChatsCtrl', function($scope, candleStickService) {
+    $scope.indices = null;
+    candleStickService.getData(function(dataResponse) {
+        $scope.chats = dataResponse;
+    });
 })
 
 
@@ -16,15 +23,16 @@ angular.module('starter.controllers', ['ngAnimate'])
         $scope.items = angular.fromJson(response.data.slice(3));
     });
 })
+/*
+.controller('repeatController', function ($scope, $http, $stateParams, Indices) {
+	$scope.indices = Indices.getAll();
+})*/
 
-.controller('repeatController', function ($scope, $http, $stateParams, Chats) {
-    $scope.ticks = [{
-        id: "IASID"
-    }, {
-        id: "GOLD"
-    }, {
-        id: "CRUDEOIL"
-    }];
+.controller('repeatController', function($scope, indiceService) {
+    $scope.indices = null;
+    indiceService.getData(function(dataResponse) {
+        $scope.indices = dataResponse;
+    });
 })
 
 .controller("LineCtrl", ['$scope', '$timeout', function ($scope, $timeout) {

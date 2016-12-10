@@ -3,10 +3,10 @@
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.code}}">
         <img ng-src="{{chat.buySell}}">          
-        <h2>{{chat.code}}</h2>
-        <p>{{chat.indicator}}</p>
+        <h2>{{chat.patternName.patternID}}</h2>
+        <p>{{chat.patternName.indication}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
-          <p>{{chat.reliability}}</p> 
+          <p>{{chat.patternName.reliability}}</p> 
         <ion-option-button class="button-assertive" ng-click="remove(chat)">
           Delete
         </ion-option-button>

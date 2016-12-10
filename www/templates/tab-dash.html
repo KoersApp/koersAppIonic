@@ -9,10 +9,10 @@
       Not all patterns can be seen by the naked eye there comes this app in the picture by calculating the slightest bit off change it can  get identify an pattern and warn  you with an push notification.
     </p>Add tickers   
       <div ng-controller="repeatController">
-          <li class="animate-repeat" ng-if="ticks.length > 0">
-      <strong>Total lenght is {{ticks.length}}.</strong>
+          <li class="animate-repeat" ng-if="indices.length > 0">
+      <strong>Total lenght is {{indices.length}}.</strong>
     </li>
-          <div class="animate-repeat" ng-if="ticks.length == null">
+          <div class="animate-repeat" ng-if="indices.length == null">
       <li><strong>It Seems you don`t have connection to the server..</strong></li>
       <li><strong>Check your wifi.</strong></li>
           <li><strong>The servers could be down</strong></li>
@@ -23,8 +23,8 @@
  <a class="item item-icon-left"><i class="icon ion-search"></i><input type="search" ng-model="q" placeholder="Search..." aria-label="filter friends" />
 </a>
   <ul class="example-animate-container">
-    <li class="animate-repeat" ng-repeat="tick in ticks | filter:q as results">
-      [{{$index + 1}}] {{tick.id}}
+    <li class="animate-repeat" ng-repeat="indice in indices | filter:q as results">
+      [{{$index + 1}}] {{indice.indexName}}
     </li>
     <li class="animate-repeat" ng-if="results.length == 0">
       <strong>No results found...</strong>
